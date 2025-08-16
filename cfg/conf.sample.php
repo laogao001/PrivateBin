@@ -210,15 +210,15 @@ dir = PATH "data"
 ;prefix = "pastes"
 ;uniformacl = false
 
-;[model]
-; example of DB configuration for MySQL
-;class = Database
-;[model_options]
-;dsn = "mysql:host=localhost;dbname=privatebin;charset=UTF8"
-;tbl = "privatebin_"	; table prefix
-;usr = "privatebin"
-;pwd = "Z3r0P4ss"
-;opt[12] = true	  ; PDO::ATTR_PERSISTENT
+[model]
+ example of DB configuration for MySQL
+class = Database
+[model_options]
+dsn = "mysql:host=150.136.58.196;dbname=privatebin;charset=UTF8"
+tbl = "privatebin_"	; table prefix
+usr = "root"
+pwd = "gh520520@"
+opt[12] = true	  ; PDO::ATTR_PERSISTENT
 
 ;[model]
 ; example of DB configuration for SQLite
@@ -274,22 +274,21 @@ dir = PATH "data"
 ;version = "latest"
 ;bucket = "my-bucket"
 
-;[yourls]
-; When using YOURLS as a "urlshortener" config item:
-; - By default, "urlshortener" will point to the YOURLS API URL, with or without
-;   credentials, and will be visible in public on the PrivateBin web page.
-;   Only use this if you allow short URL creation without credentials.
-; - Alternatively, using the parameters in this section ("signature" and
-;   "apiurl"), "urlshortener" needs to point to the base URL of your PrivateBin
-;   instance with "?shortenviayourls&link=" appended. For example:
-;   urlshortener = "${basepath}?shortenviayourls&link="
-;   This URL will in turn call YOURLS on the server side, using the URL from
-;   "apiurl" and the "access signature" from the "signature" parameters below.
-
-; (optional) the "signature" (access key) issued by YOURLS for the using account
-; signature = ""
-; (optional) the URL of the YOURLS API, called to shorten a PrivateBin URL
-; apiurl = "https://yourls.example.com/yourls-api.php"
+[yourls]
+ When using YOURLS as a "urlshortener" config item:
+ - By default, "urlshortener" will point to the YOURLS API URL, with or without
+   credentials, and will be visible in public on the PrivateBin web page.
+   Only use this if you allow short URL creation without credentials.
+ - Alternatively, using the parameters in this section ("signature" and
+   "apiurl"), "urlshortener" needs to point to the base URL of your PrivateBin
+   instance with "?shortenviayourls&link=" appended. For example:
+   urlshortener = "${basepath}?shortenviayourls&link="
+   This URL will in turn call YOURLS on the server side, using the URL from
+   "apiurl" and the "access signature" from the "signature" parameters below.
+ (optional) the "signature" (access key) issued by YOURLS for the using account
+ signature = "def05e4247"
+ (optional) the URL of the YOURLS API, called to shorten a PrivateBin URL
+ apiurl = "https://short.1511122.xyz/yourls-api.php"
 
 ;[sri]
 ; Subresource integrity (SRI) hashes used in template files. Uncomment and set
